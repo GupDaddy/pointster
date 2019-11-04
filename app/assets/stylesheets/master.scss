@@ -71,3 +71,18 @@ body {
 .booyah-box h2, .booyah-box h1 {
   margin: 10px;
 }
+
+table {
+	border-collapse: collapse;
+}
+
+th {
+	background-color: #4CAF50;
+  	color: white;
+}
+
+table, th, td, tr {
+	border: 3px solid black;
+	padding: 10px;
+	text-align: center;
+}

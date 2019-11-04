@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_01_012115) do
+ActiveRecord::Schema.define(version: 2019_11_03_220838) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "courses", force: :cascade do |t|
+    t.string "name"
+    t.integer "par_hole_1"
+    t.integer "par_hole_2"
+    t.integer "par_hole_3"
+    t.integer "par_hole_4"
+    t.integer "par_hole_5"
+    t.integer "par_hole_6"
+    t.integer "par_hole_7"
+    t.integer "par_hole_8"
+    t.integer "par_hole_9"
+    t.integer "par_hole_10"
+    t.integer "par_hole_11"
+    t.integer "par_hole_12"
+    t.integer "par_hole_13"
+    t.integer "par_hole_14"
+    t.integer "par_hole_15"
+    t.integer "par_hole_16"
+    t.integer "par_hole_17"
+    t.integer "par_hole_18"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.string "tour"
+    t.string "name"
+    t.string "email"
+    t.integer "start_point_quota"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_players_on_user_id"
+  end
+
+  create_table "tours", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

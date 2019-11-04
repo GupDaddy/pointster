@@ -1,0 +1,13 @@
+<br />
+
+<div class="booyah-box col-10 offset-1">
+	<h1 class="text-center">Tours</h1>
+	<!-- <hr /> -->
+</div>
+<br />
+	<% @tours.each do |tour| %>
+		<h2 class="text-center">
+			<%= link_to tour.name, director_tour_path(tour) %>
+		</h2>
+		<br />
+	<% end %>

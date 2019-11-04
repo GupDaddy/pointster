@@ -1,0 +1,29 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1>Add a new course</h1>
+  <%= simple_form_for @course, url: director_courses_path do |f| %>
+  	<%= f.input :name %>
+  	<%= f.input :par_hole_1 %>
+	<%= f.input :par_hole_2 %>
+	<%= f.input :par_hole_3 %>
+	<%= f.input :par_hole_4 %>
+	<%= f.input :par_hole_5 %>
+	<%= f.input :par_hole_6 %>
+	<%= f.input :par_hole_7 %>
+	<%= f.input :par_hole_8 %>
+	<%= f.input :par_hole_9 %>
+	<%= f.input :par_hole_10 %>
+	<%= f.input :par_hole_11 %>
+	<%= f.input :par_hole_12 %>
+	<%= f.input :par_hole_13 %>
+	<%= f.input :par_hole_14 %>
+	<%= f.input :par_hole_15 %>
+	<%= f.input :par_hole_16 %>
+	<%= f.input :par_hole_17 %>
+	<%= f.input :par_hole_18 %>
+	<br />
+	<%= f.submit "Create", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>
