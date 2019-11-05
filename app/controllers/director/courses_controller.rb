@@ -1,5 +1,5 @@
 class Director::CoursesController < ApplicationController
-	before_action :authenticate_user!
+	before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
 
 	def new
 		@course = Course.new
@@ -16,7 +16,38 @@ class Director::CoursesController < ApplicationController
 
 	def index
 		@courses = Course.all
-		
+	end
+
+	def edit
+		@course = Course.find(params[:id])
+
+		if @course.user != current_user
+			return render plain: 'Not Allowed', status: :forbidden
+		end
+	end
+
+	def update
+		@course = Course.find(params[:id])
+		if @course.user != current_user
+			return render plain: 'Not Allowed', status: :forbidden
+		end
+
+		@course.update_attributes(course_params)
+		if @course.valid?
+			redirect_to director_course_path
+		else
+			render :edit, status: :unprocessable_entity
+		end
+	end
+
+	def destroy
+		@course = Course.find(params[:id])
+		if @course.user != current_user
+			return render plain: 'Not Allowed', status: :forbidden
+		end
+
+		@course.destroy
+		redirect_to root_path
 	end
 
 	private

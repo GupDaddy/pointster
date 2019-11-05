@@ -2,9 +2,13 @@
 
 <div class="booyah-box col-10 offset-1">
 	<h1 class="text-center">Courses</h1>
-	<!-- <hr /> -->
+		<div class="float-right">
+	    	<%= link_to 'Add Course', new_director_course_path, class: 'btn btn-primary' %>
+	    	<br />
+	    </div>
+
 </div>
-<br />
+<br /><br />
 	<% @courses.each do |course| %>
 		<h2 class="text-center">
 			<%= link_to course.name, director_course_path(course) %>

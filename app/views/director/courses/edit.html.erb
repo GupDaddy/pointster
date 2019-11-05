@@ -1,0 +1,64 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="">Edit Your Course</h1>
+  <%= simple_form_for @course, url: director_course_path do |f| %>
+  	<%= f.input :name %>
+  	<tr>Hole 1 Par</tr>
+  	<%= f.input_field :par_hole_1, collection: 3..5 %>
+  	<br />
+  	<tr>Hole 2 Par</tr>
+	<%= f.input_field :par_hole_2, collection: 3..5 %>
+	<br />
+	<tr>Hole 3 Par</tr>
+	<%= f.input_field :par_hole_3, collection: 3..5 %>
+	<br />
+	<tr>Hole 4 Par</tr>
+	<%= f.input_field :par_hole_4, collection: 3..5 %>
+	<br />
+	<tr>Hole 5 Par</tr>
+	<%= f.input_field :par_hole_5, collection: 3..5 %>
+	<br />
+	<tr>Hole 6 Par</tr>
+	<%= f.input_field :par_hole_6, collection: 3..5 %>
+	<br />
+	<tr>Hole 7 Par</tr>
+	<%= f.input_field :par_hole_7, collection: 3..5 %>
+	<br />
+	<tr>Hole 8 Par</tr>
+	<%= f.input_field :par_hole_8, collection: 3..5 %>
+	<br />
+	<tr>Hole 9 Par</tr>
+	<%= f.input_field :par_hole_9, collection: 3..5 %>
+	<br />
+	<tr>Hole 10 Par</tr>
+	<%= f.input_field :par_hole_10, collection: 3..5 %>
+	<br />
+	<tr>Hole 11 Par</tr>
+	<%= f.input_field :par_hole_11, collection: 3..5 %>
+	<br />
+	<tr>Hole 12 Par</tr>
+	<%= f.input_field :par_hole_12, collection: 3..5 %>
+	<br />
+	<tr>Hole 13 Par</tr>
+	<%= f.input_field :par_hole_13, collection: 3..5 %>
+	<br />
+	<tr>Hole 14 Par</tr>
+	<%= f.input_field :par_hole_14, collection: 3..5 %>
+	<br />
+	<tr>Hole 15 Par</tr>
+	<%= f.input_field :par_hole_15, collection: 3..5 %>
+	<br />
+	<tr>Hole 16 Par</tr>
+	<%= f.input_field :par_hole_16, collection: 3..5 %>
+	<br />
+	<tr>Hole 17 Par</tr>
+	<%= f.input_field :par_hole_17, collection: 3..5 %>
+	<br />
+	<tr>Hole 18 Par</tr>
+	<%= f.input_field :par_hole_18, collection: 3..5 %>
+	<br />
+	<%= f.submit "Update", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>
