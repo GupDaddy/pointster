@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_03_220838) do
+ActiveRecord::Schema.define(version: 2019_11_07_013436) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,36 @@ ActiveRecord::Schema.define(version: 2019_11_03_220838) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_courses_on_user_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string "course"
+    t.date "date"
+    t.string "player"
+    t.string "email"
+    t.integer "team"
+    t.integer "hole_1_points"
+    t.integer "hole_2_points"
+    t.integer "hole_3_points"
+    t.integer "hole_4_points"
+    t.integer "hole_5_points"
+    t.integer "hole_6_points"
+    t.integer "hole_7_points"
+    t.integer "hole_8_points"
+    t.integer "hole_9_points"
+    t.integer "hole_10_points"
+    t.integer "hole_11_points"
+    t.integer "hole_12_points"
+    t.integer "hole_13_points"
+    t.integer "hole_14_points"
+    t.integer "hole_15_points"
+    t.integer "hole_16_points"
+    t.integer "hole_17_points"
+    t.integer "hole_18_points"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "players", force: :cascade do |t|

@@ -1,0 +1,17 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1>Edit Player</h1>
+  <%= simple_form_for @player, url: director_player_path do |f| %>
+  <br />
+    <p>Tour</p>
+    <%= f.collection_select :tour, Tour.order(:name), :name, :name %>
+    <br /><br />
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :start_point_quota %>
+    <br />
+    <%= f.submit "Update", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>

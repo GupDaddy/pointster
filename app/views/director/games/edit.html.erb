@@ -1,0 +1,16 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="">Edit Game</h1>
+  <%= simple_form_for @game, url: director_game_path do |f| %>
+  	<p>Course</p>
+  	<%= f.collection_select :course, Course.order(:name), :name, :name %>
+  	<br /><br />
+  	<%= f.input :date %>
+  	<br />
+  	<%= f.collection_check_boxes( :game, Player.order(:name), :name, :name, options = {}, html_options = {:checked => "checked"}) %>
+  	<br /><br />
+	<%= f.submit "Update", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>

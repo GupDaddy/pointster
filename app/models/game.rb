@@ -1,4 +1,4 @@
-class Tour < ApplicationRecord
+class Game < ApplicationRecord
 	belongs_to :user
 	has_many :players
 end
