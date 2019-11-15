@@ -1,0 +1,64 @@
+<br />
+<div class="booyah-box col-10 offset-1">
+  <h1 class="">Edit Player</h1>
+  <%= simple_form_for @gameplayer, url: director_game_gameplayer_path(@gameplayer.game_id, @gameplayer) do |f| %>
+  	<h2><%= Player.find(@gameplayer.player).name %></h2>
+  	<tr>Hole 1 Par</tr>
+  	<%= f.input_field :hole_1_score, collection: 1..8 %>
+  	<br />
+  	<tr>Hole 2 Par</tr>
+	<%= f.input_field :hole_2_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 3 Par</tr>
+	<%= f.input_field :hole_3_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 4 Par</tr>
+	<%= f.input_field :hole_4_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 5 Par</tr>
+	<%= f.input_field :hole_5_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 6 Par</tr>
+	<%= f.input_field :hole_6_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 7 Par</tr>
+	<%= f.input_field :hole_7_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 8 Par</tr>
+	<%= f.input_field :hole_8_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 9 Par</tr>
+	<%= f.input_field :hole_9_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 10 Par</tr>
+	<%= f.input_field :hole_10_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 11 Par</tr>
+	<%= f.input_field :hole_11_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 12 Par</tr>
+	<%= f.input_field :hole_12_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 13 Par</tr>
+	<%= f.input_field :hole_13_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 14 Par</tr>
+	<%= f.input_field :hole_14_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 15 Par</tr>
+	<%= f.input_field :hole_15_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 16 Par</tr>
+	<%= f.input_field :hole_16_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 17 Par</tr>
+	<%= f.input_field :hole_17_score, collection: 1..8 %>
+	<br />
+	<tr>Hole 18 Par</tr>
+	<%= f.input_field :hole_18_score, collection: 1..8 %>
+	<br />
+	<%= f.submit "Update", class: 'btn btn-primary' %>
+    <br />
+  <% end %>
+  <br />
+</div>

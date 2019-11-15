@@ -2,20 +2,15 @@
 
 <div class="booyah-box col-10 offset-1">
 	<h1 class="text-center">Games</h1>
-		<div class="float-right">
-	    	<%= link_to 'Add Game', new_director_game_path, class: 'btn btn-primary' %>
-	    	<br />
-	    </div>
-
+	<div class="text-center">
+    	<%= link_to 'Add Game', new_director_game_path, class: 'btn btn-primary' %>
+    	<br />
+    </div>
 </div>
 <br /><br />
-	<% @games.each do |game| %>
-		<h2 class="text-center">
-			<%= link_to game.course, director_game_path(game) %>
-		</h2>
-		<br />
-	<!-- </div> -->
-		
-	<!-- <br class="clr" /> -->
-	<% end %>
-<!-- </div> -->
+<% @games.each do |game| %>
+	<h2 class="text-center">
+		<%= link_to [game.date.strftime("%m/%d/%Y"), Course.find(game.course).name].join(' - '), director_game_path(game) %>
+	</h2>
+	<br />
+<% end %>

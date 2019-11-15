@@ -7,7 +7,7 @@
   	<br /><br />
   	<%= f.input :date %>
   	<br />
-  	<%= f.collection_check_boxes( :game, Player.order(:name), :name, :name, options = {}, html_options = {:checked => "checked"}) %>
+  	<%= f.collection_check_boxes :player, Player.order(:name), :name, :name %>
   	<br /><br />
 	<%= f.submit "Update", class: 'btn btn-primary' %>
     <br />

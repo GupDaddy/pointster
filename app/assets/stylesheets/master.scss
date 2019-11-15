@@ -79,10 +79,12 @@ table {
 th {
 	background-color: #4CAF50;
   	color: white;
+    column-width: 100px;
 }
 
 table, th, td, tr {
 	border: 3px solid black;
-	padding: 10px;
+	padding: 20px;
 	text-align: center;
+  column-width: 100px;
 }
